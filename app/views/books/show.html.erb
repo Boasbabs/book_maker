@@ -15,7 +15,7 @@
        	</p>
        	<%= form_tag(book_path(@book), method: :delete) do %>
 	       	<div class="form-group">
-			  <%= text_field_tag(:title_confirmation, "", type: "text", class: "form-control") %>
+			     <%= text_field_tag(:title_confirmation, "", type: "text", class: "form-control") %>
 	       	</div>
 		  <%= submit_tag("Confirm", class: "btn btn-danger") %>
 		<% end %>

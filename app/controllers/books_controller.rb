@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
 	before_action :fetch_book, only: [:show, :destroy]
+
   def index
   	@books = Book.all 
   end
@@ -18,14 +19,17 @@ class BooksController < ApplicationController
   end
 
   def show
+  	flash.now[:success] = I18n.t("flash_messages.books.deletion_success")
   end
 
   def destroy
   	if params[:title_confirmation].downcase == @book.title.downcase
   		@book.destroy
-  		redirect_to book_path, success: "Book titled '#{@book.title}' is successfully destroy."
+  		flash[:success] = I18n.t("flash_messages.books.deletion_success")
+  		redirect_to books_path
   	else
-  		redirect_to book_path(@book), danger: "Book not deleted! You did not enter the correct book title."
+  		flash[:danger] = I18n.t("flash_messages.books.deletion_failure")
+  		redirect_to book_path(@book)
   	end
   end
 

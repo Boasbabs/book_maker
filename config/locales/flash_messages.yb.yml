@@ -1,0 +1,5 @@
+yb:
+  flash_messages:
+    books:
+      deletion_success: "Oti yo iwe na kuro"
+      deletion_failure: "Iwe to fe yo kuro kosese!"
