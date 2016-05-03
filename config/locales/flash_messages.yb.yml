@@ -3,3 +3,4 @@ yb:
     books:
       deletion_success: "Oti yo iwe na kuro"
       deletion_failure: "Iwe to fe yo kuro kosese!"
+      updation_success: "Oti yi oruko iwe na pada"

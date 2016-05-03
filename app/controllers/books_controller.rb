@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-	before_action :fetch_book, only: [:show, :destroy]
+	before_action :fetch_book, only: [:show, :destroy, :edit, :update]
 
   def index
   	@books = Book.all 
@@ -19,7 +19,15 @@ class BooksController < ApplicationController
   end
 
   def show
-  	flash.now[:success] = I18n.t("flash_messages.books.deletion_success")
+  end
+
+  def update
+    if @book.update_attributes(book_params)
+      flash[:success] = I18n.t("flash_messages.books.updation_success")
+      redirect_to book_path(@book)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -31,6 +39,9 @@ class BooksController < ApplicationController
   		flash[:danger] = I18n.t("flash_messages.books.deletion_failure")
   		redirect_to book_path(@book)
   	end
+  end
+
+  def edit
   end
 
   private
