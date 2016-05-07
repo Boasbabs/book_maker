@@ -1,7 +1,5 @@
-<li id="<%= dom_id chapter %>">
+<div id="<%= dom_id chapter %>">
 <%= chapter.title %>
-(
 	<%= link_to fa_icon("pencil"), edit_book_chapter_path(chapter.book, chapter), remote: true %> |
-	<%= link_to "Delete", book_chapter_path(chapter.book, chapter), remote: true, method: :delete, class: "text-danger" %>
-)
-</li>
+	<%= link_to fa_icon("trash"), book_chapter_path(chapter.book, chapter), remote: true, method: :delete, class: "text-danger" %>
+</div>
