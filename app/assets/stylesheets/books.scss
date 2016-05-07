@@ -1,5 +1,46 @@
 #book {
 	#chapters-list {
 		border-right: 1px solid $dark-color;
+		padding-right: 15px;
+
+		.chapter {
+			a.chapter-title {
+				margin-right: 2.5em;
+				display: block;
+			}
+
+			a.chapter-edit, a.chapter-delete {
+				float: right;
+				margin-left: 0.5em;
+				visibility: hidden;
+			}
+
+			&:hover {
+				a.chapter-edit, a.chapter-delete {
+					visibility: visible;
+				}
+			}
+		}
+
+		.sections-list {
+			margin-left: 1em;
+
+				.section {
+					a.section-title {
+						margin-right: 2.5em;
+						display: block;
+					}
+
+				a.section-edit, a.section-delete {
+					float: right;
+					margin-left: 0.5em;
+					visibility: hidden;
+				}
+
+				&:hover {
+					visibility: visible;
+				}
+			}
+		}
 	}
 }
