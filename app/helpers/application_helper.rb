@@ -4,12 +4,6 @@ module ApplicationHelper
 	end
 
 	def flash_messages_tag
-	# <% flash.each do |fl| %>
-	# 	<div class="alert alert-<%= fl[0]  %> alert-dismissible" role="alert">
-	# 	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	# 		<%= fl[1] %>
-	# 	</div>
-	# <% end %>
 		str = ""
 
 		flash.each do |fl|
