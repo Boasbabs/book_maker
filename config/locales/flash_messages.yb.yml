@@ -8,3 +8,5 @@ yb:
         deletion_failure: "Abala to fe yo kuro kosese!"
     sections:
       creation_failure: "Eka iwe to fe yo kuro kosese!"
+      deletion_success: "Oti yo iwe na kuro"
+      deletion_failure: "Iwe to fe yo kuro kosese!"

@@ -1,6 +1,5 @@
 <% if @destroy_failed %>
-	$("header.alert").remove();
-	$("header").append("<%= j flash_messages_tag %>");
+	BookMakerUtils.showFlash("<%= j flash_messages_tag %>");
 <% else %>
 	$("#<%= dom_id(@chapter) %>").remove();
 <% end %>
