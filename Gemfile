@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'jquery-turbolinks'
 gem "font-awesome-rails"
+gem "devise"
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
